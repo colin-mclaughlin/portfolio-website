@@ -1,0 +1,30 @@
+import { Float, useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
+
+const ReactLogo = (props) => {
+  const { nodes, materials } = useGLTF('models/react.glb');
+  const logoRef = useRef()
+
+  useFrame(() => {
+    if (logoRef.current) {
+      logoRef.current.rotation.y += 0.015 // spin speed
+    }
+  })
+
+  return (
+    <group ref = {logoRef }position={[0, 0, 0]} scale={0.4} {...props} dispose={null}>
+      <mesh
+        geometry={nodes['React-Logo_Material002_0'].geometry}
+        material={materials['Material.002']}
+        position={[0, 0.079, 0.181]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0.392, 0.392, 0.527]}
+      />
+    </group>
+  );
+};
+
+useGLTF.preload('models/react.glb');
+
+export default ReactLogo;
