@@ -178,7 +178,9 @@ const About = () => {
                             </p>
 
                             <div>
-                                <Button name = "Contact Form" isBeam containerClass="w-full mt-12"/>
+                                <a href="#contact">
+                                    <Button name = "Contact Form" isBeam containerClass="w-full mt-12"/>
+                                </a>
                             </div>
                             
 
