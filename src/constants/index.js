@@ -133,15 +133,14 @@ export const myProjects = [
       },
     ],
   },
-  /*
+  
   {
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+    title: 'SortSeek - Local AI File Assistant',
+    desc: 'A privacy-first desktop app that helps users intelligently organize, search, and summarize their documents. SortSeek empowers users to work offline with powerful semantic search, smart renaming, and clause-level summarization.',
+    subdesc: 'Designed for speed and control, SortSeek combines Electron, FastAPI, LangChain, and ChromaDB to deliver local embeddings, clause TLDRs, and document insights without relying on the cloud.',
+    href: 'https://github.com/colin-mclaughlin',
     texture: '/textures/project/project3.mp4',
-    logo: '/assets/project-logo3.png',
+    logo: '/assets/sortseeklogo.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -153,26 +152,32 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'Python',
+        path: '/assets/python.png',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Electron',
+        path: '/assets/electron.png',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'FastAPI',
+        path: '/assets/fastapi.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'LangChain',
+        path: '/assets/langchain.png',
+      },
+      {
+        id: 5,
+        name: 'React',
+        path: '/assets/react.svg',
       },
     ],
   },
+  /*
   {
     title: 'Horizon - Online Banking Platform',
     desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
