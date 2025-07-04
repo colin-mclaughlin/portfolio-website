@@ -235,7 +235,7 @@ const Contact = () => {
                                     className={`w-full bg-black-300 px-4 py-3 rounded-lg border text-white placeholder-gray-400 
                                              focus:outline-none transition-all duration-300 resize-none
                                              ${errors.message ? 'border-red-500' : 'border-black-400 hover:border-gray-500 focus:border-gray-500'}`}
-                                    placeholder="Tell me about your project or how I can help..."
+                                    placeholder="Reach out with anything — questions, feedback, or ideas?"
                                 />
                                 {errors.message && (
                                     <p className="text-red-400 text-xs">{errors.message}</p>

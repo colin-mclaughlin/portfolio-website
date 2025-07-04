@@ -24,7 +24,7 @@ const Projects = () => {
 
     return (
         <section id = "projects" className = "c-space my-20">
-            <p className = "head-text"> 
+            <p className = "head-text text-center"> 
                 My Work
             </p>
 

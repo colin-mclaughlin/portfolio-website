@@ -11,7 +11,7 @@ import Contact from './sections/Contact';
 const App = () => {
   return (
     <main className = "max-w-7xl mx-auto relative">
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
       <Navbar />
       <Hero />
       <About/>

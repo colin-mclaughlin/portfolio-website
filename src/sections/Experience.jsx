@@ -11,7 +11,7 @@ const Experience = () => {
     return (
         <section id = "experience" className = "c-space my-20">
             <div className = "w-full text-white-600">
-                <h3 className = "head-text">
+                <h3 className = "head-text text-center">
                     My Technical Experience
                 </h3>
 

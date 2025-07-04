@@ -135,7 +135,7 @@ export const myProjects = [
   },
   
   {
-    title: 'SortSeek - Local AI File Assistant',
+    title: 'SortSeek',
     desc: 'A privacy-first desktop app that helps users intelligently organize, search, and summarize their documents. SortSeek empowers users to work offline with powerful semantic search, smart renaming, and clause-level summarization.',
     subdesc: 'Designed for speed and control, SortSeek combines Electron, FastAPI, LangChain, and ChromaDB to deliver local embeddings, clause TLDRs, and document insights without relying on the cloud.',
     href: 'https://github.com/colin-mclaughlin',
