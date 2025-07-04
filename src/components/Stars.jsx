@@ -3,38 +3,62 @@ import { Canvas, useFrame} from "@react-three/fiber"
 import { Points, PointMaterial, Preload, Point } from "@react-three/drei"
 import * as random from 'maath/random';
 
-const Stars = (props) => {
+const Stars = ({ 
+    count = 5000, 
+    radius = 1.2, 
+    position = [0, 0, 0],
+    rotation = [0, 0, Math.PI / 4],
+    color = "#f272c8",
+    size = 0.0012,
+    speed = { x: 35, y: 40 }
+}) => {
 
     const ref = useRef();
 
-    const sphere = random.inSphere(new Float32Array(5000), {radius: 1.2})
+    const sphere = random.inSphere(new Float32Array(count), { radius })
 
     useFrame((state, delta) => {
-        ref.current.rotation.x -= delta / 35;
-        ref.current.rotation.y -= delta / 40;
+        ref.current.rotation.x -= delta / speed.x;
+        ref.current.rotation.y -= delta / speed.y;
     })
 
     return (
-        <group rotation = {[0,0, Math.PI / 4]}>
-            <Points ref = {ref} positions = {sphere} stride={3} frustumCulled {...props}>
+        <group rotation={rotation} position={position}>
+            <Points ref={ref} positions={sphere} stride={3} frustumCulled>
                 <PointMaterial 
                 transparent
-                color = "#f272c8"
-                size = {0.0012}
-                sizeAttenuation = {true}
-                depthWrite = {false}
+                color={color}
+                size={size}
+                sizeAttenuation={true}
+                depthWrite={false}
                 />
             </Points>
         </group>
     )
 }
 
-const StarsCanvas = () => {
+const StarsCanvas = ({ 
+    count = 5000, 
+    radius = 1.2, 
+    position = [0, 0, 0],
+    rotation = [0, 0, Math.PI / 4],
+    color = "#f272c8",
+    size = 0.0012,
+    speed = { x: 35, y: 40 }
+}) => {
     return (
-        <div className = "w-full h-full absolute inset-0 z-[-1]">
+        <div className="w-full h-full absolute inset-0 z-[-1]">
             <Canvas camera={{position: [0,0,1]}}>
                 <Suspense fallback={null}>
-                    <Stars />
+                    <Stars 
+                        count={count}
+                        radius={radius}
+                        position={position}
+                        rotation={rotation}
+                        color={color}
+                        size={size}
+                        speed={speed}
+                    />
                 </Suspense>
 
                 <Preload all />

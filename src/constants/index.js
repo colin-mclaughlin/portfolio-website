@@ -268,7 +268,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
     {
     id: 1,
-    name: 'CodingCat Club',
+    name: 'CodingCat',
     pos: 'AI Software Developer',
     duration: 'June 2025 - Present',
     title: "Developing an internal full-stack application for team operations and AI-powered educational features. My work includes integrating APIs like OpenAI, designing and testing prompts, building backend services, and ensuring API reliability through monitoring and error handling. I also support security compliance, contribute to team planning, and generate technical documentation.",

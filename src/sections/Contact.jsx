@@ -4,6 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import Button from '../components/Button.jsx';
 import Earth from '../components/Earth.jsx';
+import StarsCanvas from '../components/Stars.jsx';
 
 // EmailJS Configuration - Replace with your actual values
 const EMAILJS_CONFIG = {
@@ -296,7 +297,19 @@ const Contact = () => {
                 </div>
 
                 {/* Right side - 3D Earth Globe */}
-                <div className="col-span-1 h-full">
+                <div className="col-span-1 h-full relative">
+                    {/* Stars around the Earth globe */}
+                    <div className="absolute inset-0 z-0">
+                        <StarsCanvas 
+                            count={750}
+                            radius={2}
+                            position={[0, 0, 0]}
+                            color="#64b5f6"
+                            size={0.0058}
+                            speed={{ x: 60, y: 70 }}
+                        />
+                    </div>
+                    
                     <Canvas
                         camera={{ position: [0, 0, 3], fov: 50 }}
                         style={{ background: 'transparent', width: '100%', height: '100%' }}

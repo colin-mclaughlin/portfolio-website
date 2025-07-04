@@ -20,6 +20,7 @@ import HeroComputer from "../components/HeroComputer.jsx";
 import Mouse from "../components/Mouse.jsx";
 import Keyboard from "../components/Keyboard.jsx";
 import { Typewriter } from 'react-simple-typewriter';
+import StarsCanvas from "../components/Stars.jsx";
 
 const Hero = () => {
     
@@ -96,6 +97,18 @@ const Hero = () => {
 
             <div className = "w-full h-full absolute inset-0 z-0">
                 <Leva hidden /> {/* This creates a control panel for the positioning of 3D models. Super useful, and replace the fields with the hardcoded fitting values after you mess around with it */}
+
+                {/* Stars around the monitor/computer */}
+                <div className="absolute inset-0 z-0">
+                    <StarsCanvas 
+                        count={800}
+                        radius={3}
+                        position={[0, 0, 0]}
+                        color="#4a9eff"
+                        size={0.0067}
+                        speed={{ x: 50, y: 60 }}
+                    />
+                </div>
 
                 {/* A canvas is a place for a 3D scene */}
                 <Canvas className= "w-full h-full">
