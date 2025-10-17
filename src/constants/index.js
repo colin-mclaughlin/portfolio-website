@@ -266,31 +266,34 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 export const workExperiences = [
-    {
+  {
     id: 1,
     name: 'Ostar Education',
     pos: 'AI Software Developer',
-    duration: 'June 2025 - August 2025',
-    title: "Developing an internal full-stack application for team operations and AI-powered educational features. My work includes integrating APIs like OpenAI, designing and testing prompts, building backend services, and ensuring API reliability through monitoring and error handling. I also support security compliance, contribute to team planning, and generate technical documentation.",
-    icon: '/assets/codingcatlogo.png',
+    duration: 'June 2025 – August 2025',
+    title:
+      "Developed a full-stack AI lesson generation platform (FastAPI, React, OpenAI, PostgreSQL), building out databases, admin dashboards, role-based access, and complete lesson/user CRUD workflows that automated K-12 worksheet creation and cut teacher prep time from 45 to 5 minutes. Deployed the solution on a secure Linux cloud server with CI/CD (GitHub Actions), Nginx reverse proxying, and automated process monitoring. Collaborated directly with stakeholders and QA to conduct testing for production-grade usage.",
+    icon: '/assets/ostaredulogo.png',
     animation: 'salute',
   },
   {
     id: 2,
     name: 'QMIND',
-    pos: 'NLP Developer',
-    duration: 'October 2024 - April 2025',
-    title: "Developed a Convolutional Neural Network for EEG classification using TensorFlow and supporting libraries, achieving over 95% accuracy on select datasets. I handled large-scale EEG data preprocessing, analysis, and visualization using Python libraries such as NumPy, Pandas, Scikit-learn, Matplotlib, and Seaborn.",
+    pos: 'Project Lead — Technical Management Group Ltd.',
+    duration: 'September 2025 – Present',
+    title:
+      "Leading a team of 5 developers to automate contractor CV generation for a mining and energy consulting firm, reducing a 45-minute manual process to a 2-minute proofread. Building a pipeline integrating PDF/LinkedIn parsing, GPT-4, and LangChain for structured JSON output. Organizing stakeholder meetings and maintaining GitHub workflows to deliver a client-ready automation system.",
     icon: '/assets/qmind.svg',
     animation: 'victory',
   },
   {
     id: 3,
-    name: 'Queens Hyperloop Design Team',
-    pos: 'AI Research Specialist',
-    duration: 'October 2023 - October 2025',
-    title: "Designed and implemented a geospatial pathfinding algorithm in QGIS with Python to optimize a cross-provincial Hyperloop route. Contributed to technical proposals and research materials presented at Hyperloop Global (Toronto, May 2024) and European Hyperloop Week (Switzerland, July 2024), where QHDT AI earned the full-scale Socio-Economic award.",
-    icon: '/assets/hyperloop.png',
-    animation: 'clapping',
+    name: 'QMIND',
+    pos: 'AI Developer — Natural Language Processing',
+    duration: 'September 2024 – April 2025',
+    title:
+      "Developed an electroencephalograph (EEG) ML pipeline (Pandas, NumPy, scikit-learn, Matplotlib) and trained a Convolutional Neural Network classifier (TensorFlow) achieving 95% accuracy on select datasets. Produced analysis notebooks and plots, accelerating model iteration and enabling one-command retraining.",
+    icon: '/assets/qmind.svg',
+    animation: 'victory',
   },
 ];
