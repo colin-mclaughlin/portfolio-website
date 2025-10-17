@@ -8,25 +8,29 @@ export default defineConfig({
     // Enable code splitting for better performance
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Separate Three.js and related libraries into their own chunk
-          'three': ['three', '@react-three/fiber', '@react-three/drei'],
-          // Separate React and related libraries
-          'react-vendor': ['react', 'react-dom'],
-          // Separate other large libraries
-          'vendor': ['gsap', 'emailjs-com', 'react-globe.gl', 'maath']
-        }
+        // Remove manual chunks to prevent cross-chunk cycles
+        manualChunks: undefined,
+        // Optional safer split - all node_modules go to vendor chunk
+        // manualChunks(id) {
+        //   if (id.includes('node_modules')) {
+        //     return 'vendor';
+        //   }
+        // }
       }
     },
     // Optimize chunk size warnings
     chunkSizeWarningLimit: 1000,
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console.logs in production
-        drop_debugger: true
-      }
+    // Use esbuild with esnext target as recommended
+    minify: 'esbuild',
+    
+    // Esbuild options with esnext target
+    esbuild: {
+      // Use modern target for better optimization
+      target: 'esnext',
+      // Keep essential settings
+      keepNames: true,
+      // Preserve legal comments
+      legalComments: 'eof'
     }
   },
   // Optimize dependencies
@@ -35,7 +39,10 @@ export default defineConfig({
       'three',
       '@react-three/fiber',
       '@react-three/drei',
-      'gsap',
+      'gsap'
+    ],
+    // Exclude problematic libraries from pre-bundling
+    exclude: [
       'react-globe.gl'
     ]
   }
