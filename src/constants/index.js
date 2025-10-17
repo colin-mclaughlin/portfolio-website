@@ -294,6 +294,6 @@ export const workExperiences = [
     title:
       "Developed an electroencephalograph (EEG) ML pipeline (Pandas, NumPy, scikit-learn, Matplotlib) and trained a Convolutional Neural Network classifier (TensorFlow) achieving 95% accuracy on select datasets. Produced analysis notebooks and plots, accelerating model iteration and enabling one-command retraining.",
     icon: '/assets/qmind.svg',
-    animation: 'victory',
+    animation: 'clapping',
   },
 ];
