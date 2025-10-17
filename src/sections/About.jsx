@@ -1,8 +1,8 @@
 import Globe from 'react-globe.gl';
 import Button from '../components/Button.jsx';
-import { useState } from 'react';
+import { useState, memo } from 'react';
 
-const About = () => {
+const About = memo(() => {
 
     const [hasCopied, setHasCopied] = useState(false);
 
@@ -191,6 +191,6 @@ const About = () => {
             </div>
         </section>
     )
-}
+});
 
 export default About

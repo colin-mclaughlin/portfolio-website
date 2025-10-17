@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-const Earth = (props) => {
+const Earth = memo((props) => {
   const { nodes, materials } = useGLTF('/models/earth.glb')
   return (
     <group {...props} dispose={null}>
@@ -19,7 +19,7 @@ const Earth = (props) => {
       />
     </group>
   )
-}
+});
 
 useGLTF.preload('/models/earth.glb')
 

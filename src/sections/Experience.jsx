@@ -1,11 +1,12 @@
 import { Canvas } from '@react-three/fiber';
 import { workExperiences } from '../constants';
 import { OrbitControls } from '@react-three/drei';
-import { useState, Suspense } from 'react';
+import { useState, Suspense, memo } from 'react';
 import CanvasLoader from '../components/CanvasLoader.jsx';
 import Developer from '../components/Developer.jsx';
+import LazySection from '../components/LazySection.jsx';
 
-const Experience = () => {
+const Experience = memo(() => {
     const [animationName, setAnimationName] = useState("idle");
 
     return (
@@ -16,7 +17,14 @@ const Experience = () => {
                 </h3>
 
                 <div className = "work-container">
-                    <div className = "work-canvas">
+                    <LazySection 
+                        className="work-canvas"
+                        fallback={
+                            <div className="work-canvas flex items-center justify-center">
+                                <div className="text-white-600">Loading 3D Character...</div>
+                            </div>
+                        }
+                    >
                         <Canvas>
                             <ambientLight intensity = {7}/>
                             <spotLight position = {[10,10,10]} angle = {0.15} penubra= {1}/>
@@ -26,7 +34,7 @@ const Experience = () => {
                                 <Developer position-y={-2.8} scale = {2.6 } animationName={animationName}/>
                             </Suspense>
                         </Canvas>
-                    </div>
+                    </LazySection>
 
                     <div className="work-content">
                         <div className="sm:py-10 py-5 sm:px-5 px-2.5">
@@ -60,6 +68,6 @@ const Experience = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Experience

@@ -1,10 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, memo } from 'react';
 import emailjs from 'emailjs-com';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
 import Button from '../components/Button.jsx';
 import Earth from '../components/Earth.jsx';
 import StarsCanvas from '../components/Stars.jsx';
+import LazySection from '../components/LazySection.jsx';
 
 // EmailJS Configuration - Replace with your actual values
 const EMAILJS_CONFIG = {
@@ -28,7 +29,7 @@ const RotatingEarth = () => {
     );
 };
 
-const Contact = () => {
+const Contact = memo(() => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -297,7 +298,14 @@ const Contact = () => {
                 </div>
 
                 {/* Right side - 3D Earth Globe */}
-                <div className="col-span-1 h-full relative">
+                <LazySection 
+                    className="col-span-1 h-full relative"
+                    fallback={
+                        <div className="col-span-1 h-full relative flex items-center justify-center">
+                            <div className="text-white-600">Loading Earth...</div>
+                        </div>
+                    }
+                >
                     {/* Stars around the Earth globe */}
                     <div className="absolute inset-0 z-0">
                         <StarsCanvas 
@@ -328,10 +336,10 @@ const Contact = () => {
                         />
                         <Environment preset="city" />
                     </Canvas>
-                </div>
+                </LazySection>
             </div>
         </section>
     );
-};
+});
 
 export default Contact; 

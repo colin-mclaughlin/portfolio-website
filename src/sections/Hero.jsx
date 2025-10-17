@@ -101,7 +101,7 @@ const Hero = () => {
                 {/* Stars around the monitor/computer */}
                 <div className="absolute inset-0 z-0">
                     <StarsCanvas 
-                        count={800}
+                        count={600}
                         radius={3}
                         position={[0, 0, 0]}
                         color="#4a9eff"

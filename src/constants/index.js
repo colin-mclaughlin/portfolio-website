@@ -268,9 +268,9 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
     {
     id: 1,
-    name: 'CodingCat',
+    name: 'Ostar Education',
     pos: 'AI Software Developer',
-    duration: 'June 2025 - Present',
+    duration: 'June 2025 - August 2025',
     title: "Developing an internal full-stack application for team operations and AI-powered educational features. My work includes integrating APIs like OpenAI, designing and testing prompts, building backend services, and ensuring API reliability through monitoring and error handling. I also support security compliance, contribute to team planning, and generate technical documentation.",
     icon: '/assets/codingcatlogo.png',
     animation: 'salute',
@@ -288,7 +288,7 @@ export const workExperiences = [
     id: 3,
     name: 'Queens Hyperloop Design Team',
     pos: 'AI Research Specialist',
-    duration: 'October 2023 - Present',
+    duration: 'October 2023 - October 2025',
     title: "Designed and implemented a geospatial pathfinding algorithm in QGIS with Python to optimize a cross-provincial Hyperloop route. Contributed to technical proposals and research materials presented at Hyperloop Global (Toronto, May 2024) and European Hyperloop Week (Switzerland, July 2024), where QHDT AI earned the full-scale Socio-Economic award.",
     icon: '/assets/hyperloop.png',
     animation: 'clapping',

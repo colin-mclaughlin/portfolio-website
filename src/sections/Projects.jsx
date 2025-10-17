@@ -1,12 +1,13 @@
 import { myProjects } from "../constants/index.js"
-import { Suspense, useState } from "react";
+import { Suspense, useState, memo } from "react";
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 import CanvasLoader from "../components/CanvasLoader.jsx";
 import DemoComputer from "../components/DemoComputer.jsx";
+import LazySection from "../components/LazySection.jsx";
 
 const projectCount = myProjects.length;
-const Projects = () => {
+const Projects = memo(() => {
 
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
@@ -82,7 +83,14 @@ const Projects = () => {
                 
                 </div>
 
-                <div className = "border border-black-300 bg-black-200 rounded-lg h-96 md:h-full"> 
+                <LazySection 
+                    className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full"
+                    fallback={
+                        <div className="flex items-center justify-center h-full">
+                            <div className="text-white-600">Loading 3D Model...</div>
+                        </div>
+                    }
+                > 
                     <Canvas>
                         <ambientLight intensity = {Math.PI} />
                         <directionalLight position = {[10,10,5]} />
@@ -96,11 +104,11 @@ const Projects = () => {
 
                         <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false}/>
                     </Canvas>
-                </div>
+                </LazySection>
             </div>      
         </section>
 
     )
-}
+});
 
 export default Projects

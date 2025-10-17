@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Float } from '@react-three/drei';
 import { useTexture } from '@react-three/drei';
 
-const HeroComputer = (props) => {
+const HeroComputer = memo((props) => {
   const { nodes, materials } = useGLTF('/models/hero_computer4.glb')
 
   const screenTexture = useTexture('/textures/hero_computer_txt1.png');
@@ -62,7 +62,7 @@ const HeroComputer = (props) => {
         </group>
     </Float>
   )
-}
+});
 
 useGLTF.preload('/models/hero_computer4.glb')
 
