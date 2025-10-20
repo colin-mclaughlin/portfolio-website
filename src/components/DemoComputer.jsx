@@ -143,10 +143,11 @@ const DemoComputer = memo((props) => {
                 >
                     <meshBasicMaterial
                         map={currentTexture}
-                        transparent={true}
-                        opacity={fadeOpacity}
+                        transparent={false}
+                        opacity={1.0}
                         toneMapped={false}
                         side={THREE.FrontSide}
+                        depthWrite={true}
                     />
                 </mesh>
                 <group
