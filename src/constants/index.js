@@ -64,6 +64,55 @@ export const clientReviews = [
 
 export const myProjects = [
   {
+    title: 'Visulo',
+    desc:
+      'Visulo is a privacy-first AI study overlay that captures on-screen text or regions, performs OCR, retrieves grounded explanations with citations, and generates exportable flashcards and quizzes.',
+    subdesc:
+      'Built with Tauri, React/TypeScript, and Rust, Visulo runs locally with SQLite storage, e5-small embeddings via FAISS vector index, and pluggable LLM providers (OpenAI/Ollama) for retrieval-augmented answers. It delivers an ethical, offline-first studying experience with export options for Anki, Notion, and Docs.',
+    href: 'https://github.com/colin-mclaughlin',
+    texture: '/textures/project/project1.mp4',
+    logo: '/assets/visulologo1.png',
+    logoStyle: {
+      backgroundColor: '#101820',
+      border: '0.2px solid #162A3F',
+      boxShadow: '0px 0px 60px 0px #58A6FF4D',
+    },
+    spotlight: '/assets/spotlight2.png',
+    tags: [
+      { id: 1, name: 'Tauri', path: '/assets/tauri.png' },
+      { id: 2, name: 'React', path: '/assets/react.svg' },
+      { id: 3, name: 'Rust', path: '/assets/rustlogo.png' },
+      { id: 4, name: 'OpenAI', path: '/assets/openai.png' },
+    ],
+  },
+  {
+    title: 'CodeOps Agent',
+    desc:
+      'CodeOps Agent is an agentic DevOps assistant that monitors GitHub CI pipelines, retrieves semantic context from code and logs, and autonomously proposes and tests fixes in a sandboxed environment.',
+    subdesc:
+      'Developed with Python, FastAPI, and LangGraph, it integrates modular MCP tools (GitTool, TestRunnerTool, NotifierTool) into a ReAct reasoning loop using RAG over code and CI logs via FAISS embeddings. The system automates CI insights, debugging, and patch validation for modern engineering workflows.',
+    href: 'https://github.com/colin-mclaughlin',
+    texture: '/textures/project/project2.mp4',
+    logo: '/assets/codeopsagentlogo.png',
+    logoStyle: {
+      backgroundColor: '#1A1A1A',
+      border: '0.2px solid #2C2C2C',
+      boxShadow: '0px 0px 60px 0px #00BFFF4D',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      { id: 1, name: 'Python', path: '/assets/python.png' },
+      { id: 2, name: 'FastAPI', path: '/assets/fastapi.png' },
+      { id: 3, name: 'LangGraph', path: '/assets/langchain.png' },
+      { id: 4, name: 'Docker', path: '/assets/docker.png' },
+    ],
+  },
+];
+
+
+/*
+export const myProjects = [
+  {
     title: 'AutoDoc Agent',
     desc: 'AutoDoc Agent is an AI-powered tool designed to automate code documentation for GitHub repositories. It scans Python projects to identify key functions and classes, then uses the OpenAI API to generate clear, professional README content and docstrings.',
     subdesc:
@@ -177,82 +226,8 @@ export const myProjects = [
       },
     ],
   },
-  /*
-  {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
-    },
-    spotlight: '/assets/spotlight4.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
-    logo: '/assets/project-logo5.png',
-    logoStyle: {
-      backgroundColor: '#1C1A43',
-      border: '0.2px solid #252262',
-      boxShadow: '0px 0px 60px 0px #635BFF4D',
-    },
-    spotlight: '/assets/spotlight5.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      }, 
-    ], 
-  }, */
 ];
+*/
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {

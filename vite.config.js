@@ -39,11 +39,19 @@ export default defineConfig({
       'three',
       '@react-three/fiber',
       '@react-three/drei',
-      'gsap'
+      'gsap',
+      'frame-ticker',  // Prebundle frame-ticker to fix export issues
+      'prop-types',    // Prebundle prop-types to fix export issues
+      'react-responsive',  // Uses prop-types, prebundle to fix exports
+      'emailjs-com',   // Prebundle to fix potential export issues
+      'react-simple-typewriter'  // Prebundle to fix potential export issues
     ],
     // Exclude problematic libraries from pre-bundling
     exclude: [
-      'react-globe.gl'
-    ]
+      'react-globe.gl',  // Keep excluded due to complex dependencies
+      'three-globe'      // Keep excluded due to our modifications
+    ],
+    // Force re-optimization on restart
+    force: true
   }
 })

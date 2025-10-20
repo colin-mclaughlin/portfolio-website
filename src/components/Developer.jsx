@@ -14,25 +14,40 @@ const Developer = memo(({ animationName = "idle", ...props}) => {
     const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
     const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
 
+    // Safely assign animation names
     if (idleAnimation?.[0]) idleAnimation[0].name = 'idle';
     if (saluteAnimation?.[0]) saluteAnimation[0].name = 'salute';
     if (clappingAnimation?.[0]) clappingAnimation[0].name = 'clapping';
     if (victoryAnimation?.[0]) victoryAnimation[0].name = 'victory';
 
-  const { actions } = useAnimations(
-    [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
-    group,
-  );
+    // Filter out undefined animations
+    const validAnimations = [
+        idleAnimation?.[0],
+        saluteAnimation?.[0], 
+        clappingAnimation?.[0], 
+        victoryAnimation?.[0]
+    ].filter(Boolean);
+
+    const { actions } = useAnimations(validAnimations, group);
 
     useEffect(() => {
-    const action = actions?.[animationName];
+        const action = actions?.[animationName];
 
-    if (action) {
-        action.reset().fadeIn(0.5).play();
-        return () => action.fadeOut(0.5);
-    } else {
-        console.warn(`Animation '${animationName}' not found.`, actions);
-    }
+        if (action) {
+            try {
+                action.reset().fadeIn(0.5).play();
+                return () => {
+                    try {
+                        action.fadeOut(0.5);
+                    } catch (error) {
+                        // Silently handle animation cleanup errors
+                        console.debug('Animation cleanup warning:', error.message);
+                    }
+                };
+            } catch (error) {
+                console.debug('Animation play warning:', error.message);
+            }
+        }
     }, [actions, animationName]);
 
   return (
@@ -99,6 +114,6 @@ const Developer = memo(({ animationName = "idle", ...props}) => {
   )
 });
 
-useGLTF.preload('3d_portfolio-new/public/models/human/developer.glb')
+useGLTF.preload('/models/human/developer.glb')
 
 export default Developer
