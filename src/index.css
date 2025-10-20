@@ -228,3 +228,60 @@ body {
     opacity: 0;
   }
 }
+
+/* Logo glow and float animations for retro aesthetic */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.3)) 
+            drop-shadow(0 0 16px rgba(88, 166, 255, 0.2))
+            drop-shadow(0 0 24px rgba(88, 166, 255, 0.1));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(88, 166, 255, 0.4)) 
+            drop-shadow(0 0 20px rgba(88, 166, 255, 0.3))
+            drop-shadow(0 0 32px rgba(88, 166, 255, 0.2));
+  }
+}
+
+@keyframes logoGlowCodeOps {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.3)) 
+            drop-shadow(0 0 16px rgba(0, 191, 255, 0.2))
+            drop-shadow(0 0 24px rgba(0, 191, 255, 0.1));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(0, 191, 255, 0.4)) 
+            drop-shadow(0 0 20px rgba(0, 191, 255, 0.3))
+            drop-shadow(0 0 32px rgba(0, 191, 255, 0.2));
+  }
+}
+
+.logo-screen {
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.logo-screen.visulo {
+  animation: logoFloat 3s ease-in-out infinite, logoGlow 2s ease-in-out infinite;
+}
+
+.logo-screen.codeops {
+  animation: logoFloat 3s ease-in-out infinite, logoGlowCodeOps 2s ease-in-out infinite;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .logo-screen,
+  .logo-screen.visulo,
+  .logo-screen.codeops {
+    animation: none;
+  }
+}

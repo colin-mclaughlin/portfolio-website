@@ -71,6 +71,7 @@ export const myProjects = [
       'Built with Tauri, React/TypeScript, and Rust, Visulo runs locally with SQLite storage, e5-small embeddings via FAISS vector index, and pluggable LLM providers (OpenAI/Ollama) for retrieval-augmented answers. It delivers an ethical, offline-first studying experience with export options for Anki, Notion, and Docs.',
     href: 'https://github.com/colin-mclaughlin',
     texture: '/textures/project/project1.mp4',
+    logoScreen: '/assets/visulo_video_screen.mp4',
     logo: '/assets/visulologo1.png',
     logoStyle: {
       backgroundColor: '#101820',
@@ -93,6 +94,7 @@ export const myProjects = [
       'Developed with Python, FastAPI, and LangGraph, it integrates modular MCP tools (GitTool, TestRunnerTool, NotifierTool) into a ReAct reasoning loop using RAG over code and CI logs via FAISS embeddings. The system automates CI insights, debugging, and patch validation for modern engineering workflows.',
     href: 'https://github.com/colin-mclaughlin',
     texture: '/textures/project/project2.mp4',
+    logoScreen: '/assets/codeops_video_screen.mp4',
     logo: '/assets/codeopsagentlogo.png',
     logoStyle: {
       backgroundColor: '#1A1A1A',
