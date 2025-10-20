@@ -97,9 +97,9 @@ export const myProjects = [
     logoScreen: '/assets/codeops_video_screen.mp4',
     logo: '/assets/codeopsagentlogo.png',
     logoStyle: {
-      backgroundColor: '#1A1A1A',
-      border: '0.2px solid #2C2C2C',
-      boxShadow: '0px 0px 60px 0px #00BFFF4D',
+      backgroundColor: '#2A1A16',
+      border: '0.2px solid #3D2518',
+      boxShadow: '0px 0px 60px 0px #FF6B354D',
     },
     spotlight: '/assets/spotlight1.png',
     tags: [
