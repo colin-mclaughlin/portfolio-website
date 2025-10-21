@@ -246,8 +246,8 @@ export const workExperiences = [
   {
     id: 1,
     name: 'Ostar Education',
-    pos: 'AI Software Developer',
-    duration: 'June 2025 – August 2025',
+    pos: 'AI Software Developer: ',
+    duration: 'June 2025 - August 2025',
     title:
       "Developed a full-stack AI lesson generation platform (FastAPI, React, OpenAI, PostgreSQL), building out databases, admin dashboards, role-based access, and complete lesson/user CRUD workflows that automated K-12 worksheet creation and cut teacher prep time from 45 to 5 minutes. Deployed the solution on a secure Linux cloud server with CI/CD (GitHub Actions), Nginx reverse proxying, and automated process monitoring. Collaborated directly with stakeholders and QA to conduct testing for production-grade usage.",
     icon: '/assets/ostaredulogo.png',
@@ -256,7 +256,7 @@ export const workExperiences = [
   {
     id: 2,
     name: 'QMIND',
-    pos: 'Project Lead — Technical Management Group Ltd.',
+    pos: 'Project Lead - Technical Management Group Ltd: ',
     duration: 'September 2025 – Present',
     title:
       "Leading a team of 5 developers to automate contractor CV generation for a mining and energy consulting firm, reducing a 45-minute manual process to a 2-minute proofread. Building a pipeline integrating PDF/LinkedIn parsing, GPT-4, and LangChain for structured JSON output. Organizing stakeholder meetings and maintaining GitHub workflows to deliver a client-ready automation system.",
@@ -266,7 +266,7 @@ export const workExperiences = [
   {
     id: 3,
     name: 'QMIND',
-    pos: 'AI Developer — Natural Language Processing',
+    pos: 'AI Developer - Natural Language Processing: ',
     duration: 'September 2024 – April 2025',
     title:
       "Developed an electroencephalograph (EEG) ML pipeline (Pandas, NumPy, scikit-learn, Matplotlib) and trained a Convolutional Neural Network classifier (TensorFlow) achieving 95% accuracy on select datasets. Produced analysis notebooks and plots, accelerating model iteration and enabling one-command retraining.",
