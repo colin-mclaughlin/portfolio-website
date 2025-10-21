@@ -249,7 +249,7 @@ export const workExperiences = [
     pos: 'AI Software Developer: ',
     duration: 'June 2025 - August 2025',
     title:
-      "Developed a full-stack AI lesson generation platform (FastAPI, React, OpenAI, PostgreSQL), building out databases, admin dashboards, role-based access, and complete lesson/user CRUD workflows that automated K-12 worksheet creation and cut teacher prep time from 45 to 5 minutes. Deployed the solution on a secure Linux cloud server with CI/CD (GitHub Actions), Nginx reverse proxying, and automated process monitoring. Collaborated directly with stakeholders and QA to conduct testing for production-grade usage.",
+      "Developed a full-stack AI lesson generation platform (Python, FastAPI, React, OpenAI, PostgreSQL), building out databases, admin dashboards, role-based access, and complete lesson/user CRUD workflows that automated K-12 worksheet creation and cut teacher prep time from 45 to 5 minutes. Deployed the solution on a secure Linux cloud server with CI/CD (GitHub Actions), Nginx reverse proxying, and automated process monitoring. Collaborated directly with stakeholders and QA to conduct testing for production-grade usage.",
     icon: '/assets/ostaredulogo.png',
     animation: 'salute',
   },
@@ -269,7 +269,7 @@ export const workExperiences = [
     pos: 'AI Developer - Natural Language Processing: ',
     duration: 'September 2024 – April 2025',
     title:
-      "Developed an electroencephalograph (EEG) ML pipeline (Pandas, NumPy, scikit-learn, Matplotlib) and trained a Convolutional Neural Network classifier (TensorFlow) achieving 95% accuracy on select datasets. Produced analysis notebooks and plots, accelerating model iteration and enabling one-command retraining.",
+      "Developed an electroencephalograph ML pipeline (Pandas, NumPy, scikit-learn) and trained a Convolutional Neural Network (TensorFlow) to classify emotion from brain signals; achieved 95% accuracy on select datasets. Produced detailed analysis notebooks and visualizations (Matplotlib), which accelerated model iteration.",
     icon: '/assets/qmind.svg',
     animation: 'clapping',
   },
